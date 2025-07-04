@@ -1,3 +1,8 @@
+import java.util.concurrent.ThreadLocalRandom;
+
+
+
+
 // O que devemos fazer?
 
 
@@ -12,20 +17,28 @@
     // número RunnableTask: 2
     // número máximo da fila: 10
     
-public void getCliente(){
 
-    int clienteAtendido = filaClientes.poll();
-
-    System.out.println("Atendendo: " + clienteAtendido);
-
-    try {
-        Thread.sleep();
-    } catch (Exception e) {
-    }
-    
-}
 
 public class Barbeiros implements Runnable{
+    
+
+    public void getCliente(){
+
+        int clienteAtendido = filaClientes.poll();
+
+        System.out.println("Atendendo: " + clienteAtendido);
+
+        try {
+
+            int time = ThreadLocalRandom.current().nextInt(5, 10);
+            Thread.sleep(time * 1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    
+    }
+
     
     private int num_barbeiro;
 
@@ -42,7 +55,5 @@ public class Barbeiros implements Runnable{
 
     }
 
-
-        
 }   
 
