@@ -24,9 +24,9 @@ public class Barbeiros implements Runnable{
 
     public void getCliente(){
 
-        int clienteAtendido = filaClientes.poll();
+        //int clienteAtendido = filaClientes.poll();
 
-        System.out.println("Atendendo: " + clienteAtendido);
+        System.out.println("Atendendo: " /*+ clienteAtendido */);
 
         try {
 
