@@ -36,10 +36,12 @@ public class Barbeiros implements Runnable{
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        System.out.println("Cliente atendido");
     
     }
 
-    
+
     private int num_barbeiro;
 
     public Barbeiros(int num_barbeiro){
@@ -50,7 +52,7 @@ public class Barbeiros implements Runnable{
     @Override
     public void run() {
 
-        getCliente;
+        getCliente();
         System.out.println("Barbeiro" + Thread.currentThread().getName());
 
     }
